@@ -1,0 +1,45 @@
+@page
+@model WebApp.Pages.Questions.QuestionForm
+@{
+    var isPoll = true;
+    foreach (var answer in Model.Question!.Answers!)
+    {
+        if (answer.IsCorrect)
+        {
+            isPoll = false;
+            break;
+        }
+    }
+}
+
+<div class="text-center">
+    <h4>@Model.Question!.QuestionText</h4>
+</div>
+<form method="post">
+    @foreach (var answer in Model.Question.Answers!)
+    {
+        if (isPoll)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="@answer.Id" name="answerId" id="@(answer.Id)">
+                <label class="form-check-label" for="@("pollAnswer" + answer.Id)">
+                    @answer.AnswerText
+                </label>
+            </div>
+        }
+        else
+        {
+            <div class="form-check">
+                <input name="answerId" class="form-check-input" type="radio" value="@answer.Id" id="@("questionnaireAnswer" + answer.Id)">
+                <label class="form-check-label" for="@("questionnaireAnswer" + answer.Id)">
+                    @answer.AnswerText
+                </label>
+            </div>
+        }
+    }
+    <input type="hidden"asp-for="AnsweredQuizId" value="@Model.AnsweredQuizId"/>
+    <input type="hidden" asp-for="IsPoll" value="@isPoll"/>
+    <input type="hidden" asp-for="Question!.Id" value="@Model.Question.Id"/>
+    <input type="submit" value="Answer" class="btn btn-primary"/>
+    
+</form>

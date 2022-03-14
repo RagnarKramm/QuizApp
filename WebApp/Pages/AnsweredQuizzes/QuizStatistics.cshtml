@@ -1,0 +1,123 @@
+@page
+@model WebApp.Pages.AnsweredQuizzes.QuizStatistics
+@{
+    var correctQuestions = 0;
+    var allQuestions = 0;
+}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quiz!.Headline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quiz!.Author)
+        </th>
+        <th>
+            Total nr of answers
+        </th>
+        <th>
+            Results
+        </th>
+        @if (Model.HasQuestions)
+            {
+                <th>
+                    Overall percentage
+                </th>
+            }
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            @Model.Quiz!.Headline
+        </td>
+        <td>
+            @Model.Quiz!.Author
+        </td>
+        <td>@Model.AnsweredQuizzes!.Count</td>
+        <td>
+            @if (Model.HasQuestions)
+            {
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AnsweredQuizzes![0].AnsweredBy)
+                        </th>
+                        <th>
+                            Result
+                        </th>
+                        <th>
+                            Percentage
+                        </th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    @foreach (var quizAnswer in Model.AnsweredQuizzes!)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => quizAnswer.AnsweredBy)
+                            </td>
+                            <td>
+                                @{
+                                    allQuestions += quizAnswer.QuizQuestionsTotal ?? 0;
+                                    correctQuestions += quizAnswer.QuizQuestionsCorrect ?? 0;
+                                }
+                                @quizAnswer.QuizQuestionsCorrect / @quizAnswer.QuizQuestionsTotal
+                            </td>
+                            <td>
+                                @((int) ((double) quizAnswer.QuizQuestionsCorrect! / quizAnswer.QuizQuestionsTotal! * 100)) %
+                            </td>
+
+                            <td>
+                                <a class="btn btn-outline-info" asp-page="/AnsweredQuizzes/QuizResult" asp-route-answeredQuizId="@quizAnswer.Id">View result</a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table> 
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AnsweredQuizzes![0].AnsweredBy)
+                        </th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    @foreach (var quizAnswer in Model.AnsweredQuizzes!)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => quizAnswer.AnsweredBy)
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-info" asp-page="/AnsweredQuizzes/QuizResult" asp-route-answeredQuizId="@quizAnswer.Id">View result</a>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table> 
+            }
+            
+        </td>
+         @if (Model.HasQuestions)
+            {
+                <td>
+                    @((int)((double)correctQuestions / allQuestions * 100)) %
+                </td>
+            }
+    </tr>
+    </tbody>
+</table>
+<a class="btn btn-outline-info row col-2" asp-page="/Index" >Back to quizes!</a>

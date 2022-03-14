@@ -1,0 +1,58 @@
+@page
+@model WebApp.Pages.Questions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question!.QuestionText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question!.QuestionText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question!.Quiz!.Headline)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question!.Quiz!.Headline)
+        </dd>
+    </dl>
+    @if (Model.Question!.Answers!.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Question!.Answers!.First().AnswerText)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Question!.Answers!.First().IsCorrect)
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.Question!.Answers!) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AnswerText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsCorrect)
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Question!.Id">Edit</a> |
+    <a asp-page="/Quizzes/Edit" asp-route-id="@Model.Question!.QuizId">Back to List</a>
+</div>

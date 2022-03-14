@@ -1,0 +1,47 @@
+@page
+@model WebApp.Pages.Answers.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Answer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Answer!.AnswerText" class="control-label"></label>
+                <input asp-for="Answer!.AnswerText" class="form-control" />
+                <span asp-validation-for="Answer!.AnswerText" class="text-danger"></span>
+            </div>
+            @if (Model.CanBeCorrect)
+            {
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Answer!.IsCorrect" /> @Html.DisplayNameFor(model => model.Answer!.IsCorrect)
+                    </label>
+                </div>
+            }
+            <div class="form-group">
+                @if (!Model.CanBeCorrect)
+                {
+                    <input type="hidden" asp-for="Answer!.IsCorrect" value="false"/>
+                }
+                <input type="hidden" asp-for="Answer!.QuestionId" value="@Model.QuestionId"/>
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Questions/Edit" asp-route-id="@Model.QuestionId">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

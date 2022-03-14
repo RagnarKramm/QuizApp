@@ -1,0 +1,107 @@
+@page
+@model WebApp.Pages.Quizzes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Quiz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quiz!.Headline" class="control-label"></label>
+                <input asp-for="Quiz!.Headline" class="form-control" />
+                <span asp-validation-for="Quiz!.Headline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quiz!.Author" class="control-label"></label>
+                <input asp-for="Quiz!.Author" class="form-control" />
+                <span asp-validation-for="Quiz!.Author" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Quiz!.Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<a class="btn btn-outline-info" asp-page="/Questions/Create" asp-route-id="@Model.Quiz!.Id">Add question to quizz</a>
+@if (Model.Quiz!.Questions!.Count > 0)
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Quiz!.Questions!.First().QuestionText)
+            </th>
+            <th>
+                Answers
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Quiz!.Questions!)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionText)
+                </td>
+                <td>
+                    @if (item.Answers!.Count > 0)
+                    {
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => item.Answers!.First().AnswerText)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => item.Answers!.First().IsCorrect)
+                                </th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var answer in item.Answers!)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => answer.AnswerText)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => answer.IsCorrect)
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-info" asp-page="/Answers/Create" asp-route-id="@item.Id">Add anwser to question</a>
+                    }
+                </td>
+                <td>
+                    <a class="text-warning" asp-page="/Questions/Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="text-primary" asp-page="/Questions/Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="text-danger" asp-page="/Questions/Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+<div>
+    <a asp-page="/Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

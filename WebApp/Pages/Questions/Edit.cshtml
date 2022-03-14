@@ -1,0 +1,70 @@
+@page
+@model WebApp.Pages.Questions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Question</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Question!.QuestionText" class="control-label"></label>
+                <input asp-for="Question!.QuestionText" class="form-control" />
+                <span asp-validation-for="Question!.QuestionText" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Question!.Id" />
+            <div class="form-group">
+                <input type="hidden" asp-for="Question!.QuizId" value="@Model.Question!.QuizId"/>
+                <input type="submit" value="Save" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<a class="btn btn-outline-info" asp-page="/Answers/Create" asp-route-id="@Model.Question!.Id">Add anwser to question</a>
+@if (Model.Question!.Answers!.Count > 0)
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Question!.Answers!.First().AnswerText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question!.Answers!.First().IsCorrect)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Question!.Answers!) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCorrect)
+        </td>
+        <td>
+            <a class="text-warning" asp-page="/Answers/Edit" asp-route-id="@item.Id">Edit</a> |
+            <a class="text-primary" asp-page="/Answers/Details" asp-route-id="@item.Id">Details</a> |
+            <a class="text-danger" asp-page="/Answers/Delete" asp-route-id="@item.Id">Delete</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
+}
+<div>
+    <a asp-page="/Quizzes/Edit" asp-route-id="@Model.Question!.QuizId">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

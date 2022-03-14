@@ -1,0 +1,106 @@
+@page
+@model WebApp.Pages.QuizAnswers.QuizResult
+@{
+    var correctAnswers = Model.AnsweredQuiz!.QuizQuestionsCorrect;
+    var quizQuestionAmount = Model.AnsweredQuiz!.QuizQuestionsTotal;
+    var pollQuestions = Model.AnsweredQuiz!.PollQuestions;
+}
+
+
+<div>
+    <h3>You have answered @Model.AnsweredQuiz!.Quiz!.Headline.ToLower()!</h3>
+    <hr/>
+    <div>
+        @foreach (var question in Model.AnsweredQuiz.Quiz.Questions!)
+        {
+            var isPollQuestion = true;
+            @foreach (var answer in question.Answers!)
+            {
+                if (answer.IsCorrect)
+                {
+                    isPollQuestion = false;
+                }
+            }
+
+            if (!isPollQuestion)
+            {
+                <h4>
+                    @question.QuestionText
+                </h4>
+                @if (Model.UserAnswers!.First(i => i.QuestionId == question.Id).IsCorrect)
+                {
+                    <h5 class="text-success">
+                        You answered correctly '@Model.UserAnswers!.First(i => i.QuestionId == question.Id).AnswerText'!
+                    </h5>
+                }
+                else
+                {
+                    <h5 class="text-danger">
+                        You answered wrong '@Model.UserAnswers!.First(i => i.QuestionId == question.Id).AnswerText'!
+                    </h5>
+                }
+                <ul class="list-group">
+                    @foreach (var answer in question.Answers!)
+                    {
+                        @if (answer.IsCorrect)
+                        {
+                            <li class="list-group-item list-group-item-success">@answer.AnswerText</li>
+                        }
+                        else
+                        {
+                            <li class="list-group-item list-group-item-danger">@answer.AnswerText</li>
+                        }
+                    }
+                </ul>
+            }
+            else
+            {
+                <h4>
+                    @question.QuestionText
+                </h4>
+
+                <ul class="list-group">
+                    @foreach (var answer in question.Answers!)
+                    {
+                        @if (Model.UserAnswers!.Where(i => i.QuestionId == question.Id).Contains(answer))
+                        {
+                            <li class="list-group-item list-group-item-primary">@answer.AnswerText</li>
+                        }
+                        else
+                        {
+                            <li class="list-group-item list-group-item-secondary">@answer.AnswerText</li>
+                        }
+                        
+                    }
+                </ul>
+            }
+            
+        }
+    </div>
+    
+    @if (quizQuestionAmount > 0)
+    {
+        <h5 class="text-primary">
+            You answered @correctAnswers questions correctly out of @quizQuestionAmount GJ!
+        </h5>
+
+    }
+    @if (pollQuestions > 0)
+    {
+        @if (pollQuestions == 1)
+        {
+            <h5 class="text-primary">
+                <br/>
+                And gave your opinion on @pollQuestions poll!
+            </h5>
+        }
+        else
+        {
+            <h5 class="text-primary">
+                <br/>
+                And gave your opinion on @pollQuestions polls!
+            </h5>
+        }
+    }
+</div>
+<a class="btn btn-outline-info row col-2" asp-page="/Index" >Back to quizes!</a>

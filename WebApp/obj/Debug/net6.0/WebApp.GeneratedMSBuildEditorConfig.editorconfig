@@ -1,0 +1,156 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = /Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/QuizResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL1F1aXpSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/AnsweredQuizzes/QuizStatistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2VyZWRRdWl6emVzL1F1aXpTdGF0aXN0aWNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Answers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2Vycy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Answers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2Vycy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Answers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2Vycy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Answers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2Vycy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Answers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQW5zd2Vycy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Questions/QuestionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVlc3Rpb25zL1F1ZXN0aW9uRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/QuizAnswers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpekFuc3dlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/QuizAnswers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpekFuc3dlcnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/QuizAnswers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpekFuc3dlcnMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/QuizAnswers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpekFuc3dlcnMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/QuizAnswers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpekFuc3dlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Quizzes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpenplcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Quizzes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpenplcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Quizzes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpenplcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Quizzes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpenplcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Quizzes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVpenplcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ragnar/Git/icd0008/icd0008-2021f/QuizApp/WebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-qeb871jn8t
